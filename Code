@@ -1,0 +1,9 @@
+import requests
+
+BOT_TOKEN = 'aaa'
+CHANNEL_ID = '@aaa'
+
+def send_message(message):
+    requests.get(f'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage?chat_id={CHANNEL_ID}&text={message}')
+    
+send_message('Hello')
